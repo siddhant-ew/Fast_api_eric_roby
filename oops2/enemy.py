@@ -22,6 +22,10 @@ class zombie(Enemy):
     def __init__(self, health_points, attack_damage):
     
         super().__init__(type_of_enemy="zombie",health_points=health_points,attack_damage=attack_damage)
+        # The child can do everything the parent can — but sometimes the child wants to use or expand what the parent already does, instead of starting from scratch.
+        # Your Parent gives you a car 🏎️ (that’s the parent’s method).
+        # You (the Child) add a new stereo 🎶 or paint it red — you’re extending what your parent gave you.
+        # super() lets you reuse your parent’s work instead of rebuilding everything yourself.
         
     def talk(self):
         return "Grumbling!!!"
