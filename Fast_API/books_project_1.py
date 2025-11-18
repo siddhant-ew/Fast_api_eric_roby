@@ -103,3 +103,20 @@ async def update_book(update_book: Book):
 #             specific_author.append(book)
 #     return specific_author
 
+# Path Parameters:
+# These are part of the URL path itself.
+# You define them in the route path using curly braces {}.
+# They are used when you want to identify a specific resource.
+
+# Query Parameters:
+# These are optional key-value pairs that come after the “?” in the URL.
+# They are typically used to filter or modify the request.
+
+# Summary Table
+
+# | Type  | Location                         | Example URL | Example Parameter   | Common Use                 |
+# | ----- | -------------------------------- | ----------- | ------------------- | -------------------------- |
+# | Path  | `/users/{user_id}`               | `/users/10` | `user_id = 10`      | Identify specific resource |
+# | Query | `/items/?category=books&limit=5` | after `?`   | `category`, `limit` | Filter, search, pagination |
+
+
