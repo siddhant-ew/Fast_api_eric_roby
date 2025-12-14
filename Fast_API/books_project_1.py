@@ -10,7 +10,7 @@ BOOKS = [
 from fastapi import FastAPI, Body
 import uvicorn
 from pydantic import BaseModel
-
+from starlette import status    
 ## Data validation model
 class Book(BaseModel):
     title : str
@@ -30,7 +30,7 @@ async def health_checkup():
 async def read_all_books():
     return 
 
-@app.get("/book-info/author-book")
+@app.get("/book-info/author-book",status_code=status.HTTP_204_NO_CONTENT) ## added the default status code things video number 99
 async def author_book(author: str):
     specific_author = []
     for book in BOOKS:
